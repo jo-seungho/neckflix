@@ -12,5 +12,5 @@ const Div = styled.div`
 
 export const Poster = ({ url }) => {
   //   console.log(url);
-  return <Div url={url}>"asfasf"</Div>;
+  return <Div url={url}>"Poster"</Div>;
 };
