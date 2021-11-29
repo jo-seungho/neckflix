@@ -2,10 +2,10 @@
 
 ## Components
 
-- [ ] Header
+- [x] Header
 - [ ] Grid
-- [ ] Loading
-- [ ] Search
+- [x] Loading
+- [x] Search
 - [ ] Poster
 - [ ] Result
 - [ ] Detail (제목, 출시년도, 상영시간, 장르, 언어, 줄거리, 작가, 회사, 나라)
