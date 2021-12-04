@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { Poster } from "./Poster";
 
@@ -15,14 +16,37 @@ const Title = styled.h1`
   font-weight: bold;
   margin-bottom: 20px;
 `;
+
+const ThisLink = styled(Link)`
+  cursor: pointer;
+`;
+
 export const Grid = ({ data, title }) => {
-  console.log(data);
+  // console.log(data);
+  const location = useLocation();
+  const { pathname } = location;
   return (
     <>
       <Title>{title}</Title>
       <GridContainer>
         {data.map((datum) => {
-          return <Poster id={datum.id} poster_path={datum.poster_path} />;
+          return (
+            <ThisLink
+              key={datum.id}
+              // to={
+              //   pathname !== "/tv"
+              //     ? `/movie/${datum.id}`
+              //     : `${pathname}/${datum.id}`
+              // }
+              to={`${datum.id}`}
+            >
+              <Poster
+                key={datum.id}
+                id={datum.id}
+                poster_path={datum.poster_path}
+              />
+            </ThisLink>
+          );
         })}
       </GridContainer>
     </>
@@ -30,3 +54,4 @@ export const Grid = ({ data, title }) => {
 };
 
 //export default Grid;
+/// 청소기
